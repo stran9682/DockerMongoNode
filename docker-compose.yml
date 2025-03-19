@@ -1,23 +1,9 @@
 services:
-  rng:
-    build: rng
-    ports:
-    - "8001:80"
+  mongodb:
+    image: mongo:lastest
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
 
-  hasher:
-    build: hasher
-    ports:
-    - "8002:80"
-
-  webui:
-    build: webui
-    ports:
-    - "8080:80"
-    volumes:
-    - "./webui/files/:/files/"
-
-  redis:
-    image: redis
-
-  worker:
-    build: worker
+  server:
+    build:
