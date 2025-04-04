@@ -4,3 +4,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
+
+  nodejs:
+    build: node_project
+    expose: 8080:8080
