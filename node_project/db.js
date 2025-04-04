@@ -9,4 +9,4 @@ const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${M
 
 //mongoose.connect(url, {useNewUrlParser: true})
 
-mongoose.connect('mongodb://root:example@mongodb:27017?authSource=admin', {useNewUrlParser: true})
+mongoose.connect('mongodb://root:example@mongodb:27017', {useNewUrlParser: true})

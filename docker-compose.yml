@@ -3,12 +3,10 @@ services:
     container_name: db
     image: mongo:latest
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
     networks:
       - mynetwork
-    ports:
-      - "27017:27017"
 
   nodejs:
     container_name: nodejs
@@ -17,7 +15,6 @@ services:
       - "8080:8080"
     networks:
       - mynetwork
-
 
 networks:
   mynetwork:

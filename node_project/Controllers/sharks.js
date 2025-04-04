@@ -9,11 +9,13 @@ exports.index = function (req, res) {
 exports.create = function (req, res) {
         var newShark = new Shark(req.body);
         console.log(req.body);
-        let output;
-        (async () => {
-                output = await sharks.save();
+        newShark.save(function (err) {
+                if(err) {
+                res.status(400).send('Unable to save shark to database');
+            } else {
                 res.redirect('/sharks/getshark');
-        })
+            }
+      });
 };
 
 exports.list = function (req, res) {
