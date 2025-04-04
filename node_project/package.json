@@ -12,9 +12,12 @@
   "keywords": [
     "nodejs",
     "bootstrap",
-    "express"
+    "express",
+    "mongoose"
   ],
   "dependencies": {
-    "express": "^4.16.4"
+    "ejs": "^3.1.10",
+    "express": "^4.16.4",
+    "mongoose": "^8.13.2"
   }
 }
